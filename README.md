@@ -20,9 +20,12 @@ This is a modern, responsive website for Fellowship International Romanian Churc
 - Clean, simple design with red (#DC143C) and blue (#003366) color scheme
 - Bilingual content (English & Romanian)
 - Mobile-responsive layout
+- **Interactive hero section with quick navigation buttons** (Invitation, About Us, Contact, Facebook)
+- **Get Directions button** linking to Google Maps
 - Facebook integration
 - Image gallery
 - Invitation flyer section
+- Favicon using church logo
 
 ---
 
@@ -52,11 +55,12 @@ This is a modern, responsive website for Fellowship International Romanian Churc
 
 ```
 fellowshipinternational/
-├── index.html                                    # Main HTML (350 lines)
-├── styles.css                                    # Complete CSS (998 lines)
+├── index.html                                    # Main HTML (371 lines)
+├── styles.css                                    # Complete CSS (1,102 lines)
 ├── script.js                                     # JavaScript (241 lines)
 ├── README.md                                     # This documentation
 ├── Notes.txt                                     # Development notes
+├── .gitignore                                    # Git ignore file
 └── assets/                                       # Images folder
     ├── fellowship church internaltional.jpg      # Church logo/branding
     └── Fellowshipinternationalflyer.png          # Invitation flyer
@@ -158,6 +162,31 @@ fellowshipinternational/
         <p class="hero-text-en">We're happy to have fellowship with you!</p>
         <h2 class="church-name">Fellowship International Romanian Church</h2>
         <p class="tagline">Where We Love Jesus And We Love People</p>
+        
+        <a href="https://maps.google.com/?q=140+Rotonda+Blvd+W,+Rotonda+West,+FL+33947" 
+           target="_blank" class="directions-button">
+            <i class="fas fa-map-marker-alt"></i>
+            Get Directions
+        </a>
+        
+        <div class="hero-buttons">
+            <a href="#invitation" class="hero-button invitation-btn">
+                <i class="fas fa-envelope"></i>
+                Invitation
+            </a>
+            <a href="#about" class="hero-button about-btn">
+                <i class="fas fa-info-circle"></i>
+                About Us
+            </a>
+            <a href="#contact" class="hero-button contact-btn">
+                <i class="fas fa-phone"></i>
+                Contact
+            </a>
+            <a href="#events" class="hero-button events-btn">
+                <i class="fab fa-facebook-f"></i>
+                Facebook
+            </a>
+        </div>
     </div>
     <div class="hero-background"></div>
 </section>
@@ -169,15 +198,39 @@ fellowshipinternational/
 - `<p>` - Paragraphs for text content
 - `<section>` - Semantic section container
 - `<img>` - Church logo with alt text
+- `<a>` - Links for buttons
 
 **Content:**
-- Church logo image
+- Church logo image (height: 200px)
 - Main heading in Romanian: "Petrece Duminică cu noi!" (Spend Sunday with us!)
 - English translation: "Spend Sunday With Us!"
 - Romanian welcome: "Ne bucurăm să avem părtășie împreună cu tine!"
 - English translation: "We're happy to have fellowship with you!"
 - Church name in full
 - Tagline: "Where We Love Jesus And We Love People"
+
+**Action Buttons:**
+
+1. **Get Directions Button** (`.directions-button`)
+   - Icon: Map marker (`fas fa-map-marker-alt`)
+   - Links to Google Maps with church address
+   - Opens in new tab (`target="_blank"`)
+   - White background with blue text
+   - Hovers to red background
+
+2. **Navigation Buttons** (`.hero-buttons` container with 4 buttons)
+
+   | Button | Icon | Link | Color |
+   |--------|------|------|-------|
+   | **Invitation** | `fas fa-envelope` | #invitation | Red background |
+   | **About Us** | `fas fa-info-circle` | #about | Semi-transparent white |
+   | **Contact** | `fas fa-phone` | #contact | Semi-transparent white |
+   | **Facebook** | `fab fa-facebook-f` | #events | Semi-transparent white |
+
+   - All buttons use smooth scroll anchors
+   - Hover effects with color transitions
+   - Icons included with each button
+   - Responsive layout (flexbox, stacks on mobile)
 
 **Background Features:**
 - `.hero-background` - Gradient background (blue to red)
@@ -189,6 +242,31 @@ fellowshipinternational/
 - Centered content with flexbox
 - Fade-in animation on page load
 - Text shadow for readability
+- Button spacing: `.directions-button` above, `.hero-buttons` below with flex gap
+- Responsive button sizing for mobile devices
+
+**CSS Classes:**
+- `.hero` - Main section container
+- `.hero-content` - Centered content wrapper
+- `.hero-logo` - Logo image (200px height)
+- `.hero-title` - Main heading styling
+- `.hero-subtitle` - Subtitle styling
+- `.church-name` - Church name heading
+- `.tagline` - Tagline paragraph
+- `.directions-button` - Get Directions button styling
+- `.hero-buttons` - Button container (flexbox)
+- `.hero-button` - Individual button base styling
+- `.invitation-btn` - Red background button
+- `.about-btn` - Semi-transparent white button
+- `.contact-btn` - Semi-transparent white button
+- `.events-btn` - Facebook blue hover button
+
+**Interactive Features:**
+- Smooth scroll to sections using anchor links
+- Hover effects on all buttons with transform and shadow
+- Color transitions on hover
+- Touch-friendly button sizing (14px+ padding)
+- Mobile responsive with stacked layout on small screens
 
 ---
 
