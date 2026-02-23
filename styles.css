@@ -73,7 +73,7 @@ body {
 }
 
 .nav-logo {
-    height: 65px;
+    height: 75px;
     width: auto;
     object-fit: contain;
     border-radius: 5px;
@@ -188,7 +188,7 @@ body {
 }
 
 .hero-logo {
-    height: 120px;
+    height: 200px;
     width: auto;
     object-fit: contain;
     margin-bottom: 30px;
@@ -792,7 +792,7 @@ section {
 }
 
 .footer-logo {
-    height: 60px;
+    height: 70px;
     width: auto;
     object-fit: contain;
     margin-bottom: 15px;
