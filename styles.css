@@ -267,6 +267,109 @@ body {
     box-shadow: 0 8px 20px rgba(220, 20, 60, 0.4);
 }
 
+.directions-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--white);
+    color: var(--primary-blue);
+    padding: 16px 40px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-top: 20px;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.directions-button:hover {
+    background: var(--primary-red);
+    color: var(--white);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(220, 20, 60, 0.4);
+}
+
+.directions-button i {
+    font-size: 1.2rem;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 25px;
+}
+
+.hero-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 28px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    border: 2px solid var(--white);
+}
+
+.invitation-btn {
+    background: var(--primary-red);
+    color: var(--white);
+}
+
+.invitation-btn:hover {
+    background: #B01030;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(220, 20, 60, 0.3);
+}
+
+.about-btn {
+    background: rgba(255, 255, 255, 0.2);
+    color: var(--white);
+    border: 2px solid var(--white);
+}
+
+.about-btn:hover {
+    background: var(--white);
+    color: var(--primary-blue);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.contact-btn {
+    background: rgba(255, 255, 255, 0.2);
+    color: var(--white);
+    border: 2px solid var(--white);
+}
+
+.contact-btn:hover {
+    background: var(--white);
+    color: var(--primary-blue);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.events-btn {
+    background: rgba(255, 255, 255, 0.2);
+    color: var(--white);
+    border: 2px solid var(--white);
+}
+
+.events-btn:hover {
+    background: #1877F2;
+    color: var(--white);
+    border: 2px solid #1877F2;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(24, 119, 242, 0.3);
+}
+
+.hero-button i {
+    font-size: 1rem;
+}
+
 /* ============================================
    SECTION STYLES
    ============================================ */
@@ -885,6 +988,20 @@ section {
         font-size: 1rem;
     }
 
+    .directions-button {
+        padding: 14px 32px;
+        font-size: 1rem;
+    }
+
+    .hero-buttons {
+        gap: 12px;
+    }
+
+    .hero-button {
+        padding: 12px 22px;
+        font-size: 0.95rem;
+    }
+
     .section-title {
         font-size: 1.8rem;
     }
@@ -995,5 +1112,17 @@ section {
 
     .time-slot h4 {
         font-size: 1rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hero-button {
+        width: 100%;
+        justify-content: center;
+        padding: 12px 20px;
+        font-size: 0.9rem;
     }
 }
