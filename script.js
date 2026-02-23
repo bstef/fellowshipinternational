@@ -3,7 +3,7 @@
    JavaScript Functionality
    ============================================ */
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     initializeNavigation();
     initializeScrollAnimations();
 });
@@ -18,21 +18,21 @@ function initializeNavigation() {
     const navLinks = document.querySelectorAll('.nav-menu a');
 
     // Toggle menu
-    hamburger.addEventListener('click', function() {
+    hamburger.addEventListener('click', function () {
         navMenu.classList.toggle('active');
         hamburger.classList.toggle('active');
     });
 
     // Close menu when link is clicked
     navLinks.forEach(link => {
-        link.addEventListener('click', function() {
+        link.addEventListener('click', function () {
             navMenu.classList.remove('active');
             hamburger.classList.remove('active');
         });
     });
 
     // Close menu when clicking outside
-    document.addEventListener('click', function(event) {
+    document.addEventListener('click', function (event) {
         if (!event.target.closest('.navbar')) {
             navMenu.classList.remove('active');
             hamburger.classList.remove('active');
@@ -50,7 +50,7 @@ function initializeScrollAnimations() {
         rootMargin: '0px 0px -100px 0px'
     };
 
-    const observer = new IntersectionObserver(function(entries) {
+    const observer = new IntersectionObserver(function (entries) {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('animated');
@@ -64,6 +64,19 @@ function initializeScrollAnimations() {
         card.classList.add('fade-in-up');
         observer.observe(card);
     });
+
+    // Observe about columns
+    document.querySelectorAll('.about-column').forEach(column => {
+        column.classList.add('fade-in-up');
+        observer.observe(column);
+    });
+
+    // Observe about history
+    const aboutHistory = document.querySelector('.about-history');
+    if (aboutHistory) {
+        aboutHistory.classList.add('fade-in-up');
+        observer.observe(aboutHistory);
+    }
 
     // Observe gallery items
     document.querySelectorAll('.gallery-item').forEach(item => {
@@ -107,14 +120,14 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 // HIGHLIGHT ACTIVE NAV LINK
 // ============================================
 
-window.addEventListener('scroll', function() {
+window.addEventListener('scroll', function () {
     let scrollPosition = window.scrollY + 100;
-    
+
     document.querySelectorAll('section').forEach(section => {
         const sectionTop = section.offsetTop;
         const sectionHeight = section.offsetHeight;
         const sectionId = section.getAttribute('id');
-        
+
         if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
             document.querySelectorAll('.nav-menu a').forEach(link => {
                 link.classList.remove('active');
@@ -180,7 +193,7 @@ document.head.appendChild(style);
 
 function loadGalleryImages() {
     const galleryItems = document.querySelectorAll('.gallery-item');
-    
+
     galleryItems.forEach((item, index) => {
         // This function can be used to load actual images
         // For now, placeholders are shown
@@ -204,7 +217,7 @@ function embedFacebookEvents() {
 }
 
 // Initialize on page load
-window.addEventListener('load', function() {
+window.addEventListener('load', function () {
     loadGalleryImages();
     embedFacebookEvents();
 });
@@ -213,7 +226,7 @@ window.addEventListener('load', function() {
 // ACCESSIBILITY: KEYBOARD NAVIGATION
 // ============================================
 
-document.addEventListener('keydown', function(event) {
+document.addEventListener('keydown', function (event) {
     if (event.key === 'Escape') {
         const navMenu = document.querySelector('.nav-menu');
         navMenu.classList.remove('active');
