@@ -1,334 +1,853 @@
-# Fellowship International Romanian Church Website
+# Fellowship International Romanian Church - Website Documentation
 
-A modern, responsive website for Fellowship International Romanian Church in Rotonda West, Florida.
+## 🏛️ Church Information
 
-## Features
+**Church Name:** Fellowship International Romanian Church
 
-✨ **Modern Design**
-- Clean, professional layout with modern typography
-- Responsive design that works on all devices (desktop, tablet, mobile)
-- Elegant color scheme with red, blue, and white colors reflecting cultural heritage
+**Location:** 140 Rotonda Blvd W, Rotonda West, FL 33947
 
-🎨 **Design Elements**
-- Smooth animations and transitions
-- Professional gradient backgrounds
-- Modern Poppins font for clean readability
-- Elegant Cardo serif font for headings
-- Accessible navigation with keyboard support
+**Tagline:** Where We Love Jesus And We Love People
 
-📱 **Fully Responsive**
-- Mobile-first design approach
-- Hamburger menu for mobile devices
-- Touch-friendly interface
-- Optimized for all screen sizes
+**Romanian Header:** Petrece Duminică cu noi! *(Spend Sunday With Us!)*
 
-🌐 **Multi-Language Support**
-- English and Romanian text throughout
-- Two service languages highlighted (English at 10:30 AM, Romanian at 1:00 PM)
-
-📍 **Integrated Locations & Contact**
-- Google Maps embedded on contact page
-- Complete contact information with icons
-- Phone and email links
-- Address and pastor information
-
-💬 **Social Media Integration**
-- Facebook page link prominently featured
-- Facebook icon with link to church events page
-- Call-to-action to follow on Facebook
-
-## File Structure
-
-```
-fellowshipinternational/
-├── index.html          # Main HTML file with all content
-├── styles.css          # Complete styling and responsive design
-├── script.js           # JavaScript for interactivity and animations
-├── README.md           # This documentation file
-└── assets/             # Folder for images (to be added)
-    ├── logo.png        # Church logo (optional)
-    ├── banner.jpg      # Hero section banner (optional)
-    └── gallery/
-        ├── worship.jpg
-        ├── fellowship.jpg
-        ├── community.jpg
-        ├── events.jpg
-        ├── youth.jpg
-        └── special.jpg
-```
-
-## How to Get Started
-
-### 1. Basic Setup
-The website is ready to use as-is. Simply open `index.html` in a web browser.
-
-### 2. Add Your Images
-To replace placeholder gallery images:
-1. Create an `assets/gallery/` folder
-2. Add your church photos (worship, fellowship, community, events, youth, special events)
-3. Update the gallery items in `index.html` with actual image paths:
-
-```html
-<div class="gallery-item">
-    <img src="assets/gallery/worship.jpg" alt="Church Worship">
-</div>
-```
-
-3. Update CSS for images:
-```css
-.gallery-placeholder {
-    /* Replace with: */
-    background-image: url('path/to/image.jpg');
-    background-size: cover;
-    background-position: center;
-}
-```
-
-### 3. Customize Content
-Edit `index.html` to update:
-- Church name and tagline
-- Service times and descriptions
-- Pastor information
-- Contact details
-- Address and location
-- Social media links
-
-## Color Scheme
-
-The website uses a carefully chosen color palette reflecting both modern design and cultural heritage:
-
-- **Primary Red**: `#DC143C` - Energy and importance
-- **Primary Blue**: `#003366` - Trust and stability
-- **Light Blue**: `#1E5A96` - Approachability
-- **White**: `#FFFFFF` - Clean and pure
-- **Dark Text**: `#2C3E50` - Readability
-
-## Sections
-
-### 1. Navigation Bar
-- Sticky navigation with smooth hover effects
-- Mobile hamburger menu
-- FIRC branding with cross icon
-- Links to all major sections
-
-### 2. Hero Section
-- Large, welcoming header with Romanian greeting
-- Church name and tagline
-- Eye-catching gradient background
-- Animated entrance
-
-### 3. Services Section
-- Three service time cards
-- English Worship (10:30 AM)
-- Fellowship Lunch (12:00 PM)
-- Romanian Worship (1:00 PM)
-
-### 4. Gallery Section
-- Image showcase area with placeholders
-- 6 gallery items for church activities
-- Hover effects for interactivity
-- Responsive grid layout
-
-### 5. Events Section
-- Facebook integration with direct link
-- Upcoming events showcase
-- Call-to-action for Facebook page
-- Regular event highlights
-
-### 6. Contact Section
-- Complete contact information
-- Pastor details
-- Phone and email links
-- Address with Google Maps embed
-- Facebook page link with icon
-- Social media icons
-
-### 7. Footer
-- Quick links
-- Service hours
-- Contact information
-- Copyright information
-
-## Responsive Breakpoints
-
-The website is optimized for:
-- **Desktop**: 1024px and above
-- **Tablet**: 768px - 1023px
-- **Mobile**: Below 768px
-- **Small Mobile**: Below 480px
-
-## JavaScript Features
-
-- **Mobile Menu Toggle**: Easy navigation on mobile devices
-- **Scroll Animations**: Cards and elements animate into view
-- **Smooth Scrolling**: Navigate smoothly between sections
-- **Active Link Highlighting**: Shows which section you're viewing
-- **Keyboard Navigation**: Press Escape to close mobile menu
-- **Intersection Observer**: Efficient animation triggering
-
-## Facebook Integration
-
-### Current Features
-- Link to Facebook page: https://www.facebook.com/profile.php?id=61577056664026
-- Facebook icon link in contact section
-- Call-to-action for events
-
-### Future Enhancements
-To embed real Facebook events, you can:
-1. Use Facebook Graph API to fetch events
-2. Display them dynamically in the events section
-3. Update `script.js` `embedFacebookEvents()` function
-
-## Adding Real Photos
-
-### Gallery Images
-Add actual church photos to the gallery by:
-1. Creating `assets/gallery/` folder
-2. Adding images: worship.jpg, fellowship.jpg, community.jpg, events.jpg, youth.jpg, special.jpg
-3. Updating HTML image sources
-4. Updating CSS background properties
-
-### Replace Placeholders
-Current placeholder structure in gallery:
-```html
-<div class="gallery-placeholder">
-    <i class="fas fa-image"></i>
-    <p>Church Worship</p>
-</div>
-```
-
-Replace with actual images:
-```html
-<img src="assets/gallery/worship.jpg" alt="Church Worship">
-```
-
-## Font Choices
-
-- **Poppins**: Modern sans-serif for body text and headings (Google Fonts)
-- **Cardo**: Elegant serif for main titles and accents (Google Fonts)
-
-Both fonts are loaded from Google Fonts CDN and fallback safely.
-
-## Icons
-
-Uses Font Awesome 6.5.1 icons loaded from CDN:
-- Cross icon (navigation)
-- Calendar icons
-- Phone/Envelope icons
-- Location icons
-- Social media icons
-- Church/worship icons
-- User clergy icon for pastor
-
-## Browser Support
-
-- Chrome/Edge (latest)
-- Firefox (latest)
-- Safari (latest)
-- Mobile browsers (iOS Safari, Chrome mobile)
-
-## Accessibility
-
-- Semantic HTML structure
-- Proper heading hierarchy
-- Alt text for images
-- ARIA labels where needed
-- Keyboard navigation support
-- High contrast colors for readability
-- Touch-friendly button sizes
-
-## SEO Optimization
-
-- Proper meta tags
-- Semantic HTML
-- Descriptive titles and headings
-- Mobile-friendly design
-- Fast loading (no large scripts)
-
-## Performance
-
-- Lightweight CSS without preprocessors
-- Minimal JavaScript
-- Efficient animations using CSS transforms
-- Responsive image loading
-- Optimized for fast page loads
-
-## Customization Tips
-
-### Change Main Colors
-Update the CSS variables in `styles.css`:
-```css
-:root {
-    --primary-red: #DC143C;
-    --primary-blue: #003366;
-    /* ... */
-}
-```
-
-### Adjust Fonts
-Update font imports in `index.html` head or `styles.css`
-
-### Add New Sections
-Follow the existing structure and class naming patterns
-
-### Modify Animations
-Update animation timing and effects in `styles.css`
-
-## Deployment
-
-### Static Hosting
-- GitHub Pages
-- Netlify
-- Vercel
-- AWS S3
-- Any web server
-
-### Domain Setup
-Point your domain to the hosting service where you deploy this site.
-
-## Contact Information
-
-**Fellowship International Romanian Church**
-- Address: 140 Rotonda Blvd W, Rotonda West, FL 33947
-- Phone: 312-972-4262
-- Email: pastorcornel@fellowshipenglewood.com
-- Facebook: https://www.facebook.com/profile.php?id=61577056664026
-
-## Support & Maintenance
-
-### Updating Service Times
-Edit the service cards in the Services section of `index.html`
-
-### Adding New Events
-Update the Events section with new event cards following the existing structure
-
-### Change Contact Info
-Update the Contact section and Footer with new information
-
-## Future Enhancements
-
-- [ ] Add actual church photos to gallery
-- [ ] Integrate real Facebook events API
-- [ ] Add prayer request form
-- [ ] Add sermon archive/podcast
-- [ ] Add member directory (private)
-- [ ] Add online giving/donations
-- [ ] Add event registration
-- [ ] Add newsletter signup
-- [ ] Add testimonials section
-- [ ] Add ministry teams section
-
-## License
-
-This website template is created for Fellowship International Romanian Church.
-
-## Questions or Issues?
-
-For help with the website, contact:
-- Pastor Cornel Stef: 312-972-4262
-- Email: pastorcornel@fellowshipenglewood.com
+**Mission:** To be a welcoming community where people of all backgrounds can experience the love of Jesus Christ, grow in faith, and serve others with compassion and dedication.
 
 ---
 
-**Last Updated**: February 20, 2026
-**Website Version**: 1.0
+## 📝 Website Overview
+
+This is a modern, responsive website for Fellowship International Romanian Church built with HTML5, CSS3, and vanilla JavaScript. The site features:
+- Clean, simple design with red (#DC143C) and blue (#003366) color scheme
+- Bilingual content (English & Romanian)
+- Mobile-responsive layout
+- Facebook integration
+- Image gallery
+- Invitation flyer section
+
+---
+
+## ⏰ Service Schedule
+
+| Time | Service | Language |
+|------|---------|----------|
+| **10:30 AM** | English Worship | English |
+| **12:00 PM** | Fellowship Lunch | Community Meal |
+| **1:00 PM** | Romanian Worship | Romanian (Slujbă în limba română) |
+
+---
+
+## 📞 Contact Information
+
+| Item | Details |
+|------|---------|
+| **Pastor** | Cornel Stef |
+| **Phone** | 312-972-4262 |
+| **Email** | pastorcornel@fellowshipenglewood.com |
+| **Address** | 140 Rotonda Blvd W, Rotonda West, FL 33947 |
+| **Facebook** | [Visit Facebook](https://www.facebook.com/profile.php?id=61577056664026) |
+
+---
+
+## 🗂️ Project File Structure
+
+```
+fellowshipinternational/
+├── index.html                                    # Main HTML (350 lines)
+├── styles.css                                    # Complete CSS (998 lines)
+├── script.js                                     # JavaScript (241 lines)
+├── README.md                                     # This documentation
+├── Notes.txt                                     # Development notes
+└── assets/                                       # Images folder
+    ├── fellowship church internaltional.jpg      # Church logo/branding
+    └── Fellowshipinternationalflyer.png          # Invitation flyer
+```
+
+---
+
+## 📋 HTML Structure & Characteristics
+
+### Document Setup
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fellowship International Romanian Church | Rotonda West, FL</title>
+```
+
+**HTML Characteristics:**
+- **DOCTYPE:** HTML5 (`<!DOCTYPE html>`)
+- **Language:** English (`lang="en"`)
+- **Character Encoding:** UTF-8 (universal character support)
+- **Viewport:** Responsive design with device scaling
+- **Title:** SEO-optimized and descriptive
+
+**External Resources:**
+- CSS: `styles.css` (main stylesheet)
+- Icons: Font Awesome 6.5.1 CDN
+- Fonts: Google Fonts (Cardo, Poppins)
+
+---
+
+## 🔨 HTML Sections & Components
+
+### 1. Navigation Bar (`<nav class="navbar">`)
+
+**Purpose:** Sticky header navigation for site-wide access
+
+**HTML Structure:**
+```html
+<nav class="navbar">
+    <div class="container">
+        <div class="nav-brand">
+            <img src="assets/fellowship church internaltional.jpg" 
+                 alt="Fellowship International Romanian Church"
+                 class="nav-logo">
+        </div>
+        <ul class="nav-menu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#invitation">Invitation</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="hamburger">
+            <span></span><span></span><span></span>
+        </div>
+    </div>
+</nav>
+```
+
+**Key Features:**
+- Fixed position (`sticky`) for persistent visibility
+- Logo image display
+- Responsive menu with anchor links
+- Hamburger toggle for mobile devices
+- Semantic `<nav>` element
+
+**CSS Classes:**
+- `.navbar` - Navigation container with sticky positioning
+- `.nav-brand` - Logo section
+- `.nav-menu` - Navigation list
+- `.hamburger` - Mobile menu button (3 spans)
+- `.nav-logo` - Logo image (height: 65px)
+
+**Functionality:**
+- Smooth scroll to sections using anchor links
+- Mobile hamburger menu toggle via JavaScript
+- Menu closes when link clicked
+
+---
+
+### 2. Hero Section (`<section id="home" class="hero">`)
+
+**Purpose:** Welcome banner with church branding and message
+
+**HTML Structure:**
+```html
+<section id="home" class="hero">
+    <div class="hero-content">
+        <img src="assets/fellowship church internaltional.jpg" 
+             alt="Fellowship International Romanian Church"
+             class="hero-logo">
+        <h1 class="hero-title">Petrece Duminică cu noi!</h1>
+        <p class="hero-subtitle">Spend Sunday With Us!</p>
+        <p class="hero-text">Ne bucurăm să avem părtășie împreună cu tine!</p>
+        <p class="hero-text-en">We're happy to have fellowship with you!</p>
+        <h2 class="church-name">Fellowship International Romanian Church</h2>
+        <p class="tagline">Where We Love Jesus And We Love People</p>
+    </div>
+    <div class="hero-background"></div>
+</section>
+```
+
+**Semantic HTML Elements:**
+- `<h1>` - Primary heading (Romanian greeting)
+- `<h2>` - Secondary heading (church name)
+- `<p>` - Paragraphs for text content
+- `<section>` - Semantic section container
+- `<img>` - Church logo with alt text
+
+**Content:**
+- Church logo image
+- Main heading in Romanian: "Petrece Duminică cu noi!" (Spend Sunday with us!)
+- English translation: "Spend Sunday With Us!"
+- Romanian welcome: "Ne bucurăm să avem părtășie împreună cu tine!"
+- English translation: "We're happy to have fellowship with you!"
+- Church name in full
+- Tagline: "Where We Love Jesus And We Love People"
+
+**Background Features:**
+- `.hero-background` - Gradient background (blue to red)
+- Animated dot pattern overlay (CSS animation: `moveBackground`)
+- Full-width display (min-height: 600px)
+
+**CSS Styling:**
+- Gradient: Blue (#003366) → Red (#DC143C)
+- Centered content with flexbox
+- Fade-in animation on page load
+- Text shadow for readability
+
+---
+
+### 3. Services Section (`<section id="services" class="services">`)
+
+**Purpose:** Display service times and worship options
+
+**HTML Structure:**
+```html
+<section id="services" class="services">
+    <div class="container">
+        <h2 class="section-title">Our Services</h2>
+        <p class="section-subtitle">Join us for worship and fellowship</p>
+        
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-book-open"></i>
+                </div>
+                <h3>10:30 AM</h3>
+                <p>English Worship</p>
+                <span class="service-details">Experience contemporary worship in English</span>
+            </div>
+            <!-- 2 more service cards -->
+        </div>
+    </div>
+</section>
+```
+
+**Service Cards (3 total):**
+
+1. **10:30 AM English Worship**
+   - Icon: `fas fa-book-open` (book icon)
+   - Text: "Experience contemporary worship in English"
+
+2. **12:00 PM Fellowship Lunch**
+   - Icon: `fas fa-users` (people icon)
+   - Text: "Share a meal and build community"
+
+3. **1:00 PM Romanian Worship**
+   - Icon: `fas fa-church` (church icon)
+   - Text: "Slujbă în limba română cu adorație tradițională" (Romanian service description)
+
+**HTML Elements Used:**
+- `<section>` - Container
+- `<h2>` - Section title
+- `<p>` - Subtitle and descriptions
+- `<div>` - Grid wrapper and cards
+- `<i>` - Font Awesome icons
+- `<span>` - Service details
+
+**CSS Classes:**
+- `.services-grid` - CSS Grid (auto-fit minmax(300px))
+- `.service-card` - Individual card styling
+- `.service-icon` - Icon color and sizing
+- `.service-details` - Description styling
+
+---
+
+### 4. Invitation Flyer Section (`<section id="invitation" class="invitation">`)
+
+**Purpose:** Showcase invitation flyer and service times in an engaging format
+
+**HTML Structure:**
+```html
+<section id="invitation" class="invitation">
+    <div class="container">
+        <h2 class="section-title">You Are Invited!</h2>
+        <p class="section-subtitle">Join our welcoming community</p>
+        
+        <div class="flyer-container">
+            <div class="flyer-image">
+                <img src="assets/Fellowshipinternationalflyer.png" 
+                     alt="Fellowship International Church Invitation Flyer">
+            </div>
+            <div class="flyer-info">
+                <h3>Join Us This Sunday</h3>
+                <p>We would love to see you at Fellowship International Romanian Church...</p>
+                
+                <div class="service-times">
+                    <div class="time-slot">
+                        <span class="time-icon">🕦</span>
+                        <div>
+                            <h4>10:30 AM</h4>
+                            <p>English Worship</p>
+                        </div>
+                    </div>
+                    <div class="time-slot">
+                        <span class="time-icon">🍽️</span>
+                        <div>
+                            <h4>12:00 PM</h4>
+                            <p>Fellowship Lunch</p>
+                        </div>
+                    </div>
+                    <div class="time-slot">
+                        <span class="time-icon">✝️</span>
+                        <div>
+                            <h4>1:00 PM</h4>
+                            <p>Romanian Worship</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+```
+
+**Key Features:**
+- Prominent flyer image display
+- Two-column layout (image + info)
+- Service times with emoji icons
+- Welcoming message text
+- Responsive to mobile (single column)
+
+**HTML Structure:**
+- `<section>` - Main container
+- `<h2>`, `<h3>` - Headings
+- `<img>` - Flyer image with alt text
+- `<div>` - Layout containers
+- `<h4>`, `<p>` - Service details
+- `<span>` - Emoji icons
+
+**CSS Classes:**
+- `.invitation` - Section background
+- `.flyer-container` - Two-column grid
+- `.flyer-image` - Image column with hover effects
+- `.flyer-info` - Information column
+- `.service-times` - Time slots container
+- `.time-slot` - Individual time slot card
+
+---
+
+### 5. Events & Facebook Section (`<section id="events" class="events">`)
+
+**Purpose:** Drive Facebook engagement and social community
+
+**HTML Structure:**
+```html
+<section id="events" class="events">
+    <div class="container">
+        <h2 class="section-title">Stay Connected</h2>
+        <p class="section-subtitle">
+            Follow us on Facebook for the latest events and announcements
+        </p>
+        
+        <div class="facebook-container">
+            <div class="facebook-box">
+                <div class="facebook-icon-large">
+                    <i class="fab fa-facebook-f"></i>
+                </div>
+                <h3>Join Our Community Online</h3>
+                <p>Visit our Facebook page to see upcoming events...</p>
+                <a href="https://www.facebook.com/profile.php?id=61577056664026" 
+                   target="_blank" 
+                   class="facebook-link">
+                    <i class="fab fa-facebook-f"></i>
+                    <span>Follow Us On Facebook</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+```
+
+**Key Features:**
+- Blue gradient background (`--primary-blue` to lighter blue)
+- Large Facebook icon display
+- Call-to-action button
+- Link opens Facebook in new tab (`target="_blank"`)
+- Responsive container with hover effects
+
+**HTML Elements:**
+- `<section>` - Blue gradient section
+- `<h2>`, `<h3>` - Headings
+- `<p>` - Description text
+- `<a>` - Facebook link with `target="_blank"`
+- `<i>` - Facebook icons (Font Awesome: `fab fa-facebook-f`)
+- `<span>` - Link text
+
+**CSS Classes:**
+- `.events` - Blue gradient section with pattern overlay
+- `.facebook-container` - Centered container
+- `.facebook-box` - Card styling with border-top
+- `.facebook-icon-large` - Large icon (4rem size)
+- `.facebook-link` - Button styling with hover effects
+
+**Link Details:**
+- URL: `https://www.facebook.com/profile.php?id=61577056664026`
+- Opens in new tab for better UX
+- Button has hover animation (translate, shadow)
+
+---
+
+### 6. Gallery Section (`<section id="gallery" class="gallery">`)
+
+**Purpose:** Showcase community moments and activities
+
+**HTML Structure:**
+```html
+<section id="gallery" class="gallery">
+    <div class="container">
+        <h2 class="section-title">Our Community</h2>
+        <p class="section-subtitle">Moments of faith, worship, and fellowship</p>
+        
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <div class="gallery-placeholder">
+                    <i class="fas fa-church"></i>
+                    <p>Sunday Worship</p>
+                </div>
+            </div>
+            <!-- 5 more items -->
+        </div>
+    </div>
+</section>
+```
+
+**Gallery Items (6 total):**
+
+| Icon | Label | Font Awesome Class |
+|------|-------|-------------------|
+| ⛪ | Sunday Worship | `fas fa-church` |
+| 🙏 | Prayer & Praise | `fas fa-hands-praying` |
+| 👥 | Fellowship Community | `fas fa-users` |
+| ❤️ | Service & Love | `fas fa-heart` |
+| 👶 | Family Ministry | `fas fa-child` |
+| 📅 | Special Events | `fas fa-calendar-alt` |
+
+**HTML Structure:**
+```html
+<div class="gallery-item">
+    <div class="gallery-placeholder">
+        <i class="fas fa-church"></i>
+        <p>Sunday Worship</p>
+    </div>
+</div>
+```
+
+**Styling Features:**
+- CSS Grid layout (`auto-fit minmax(250px, 1fr)`)
+- Square aspect ratio (1:1)
+- Gradient backgrounds (blue to red on hover)
+- Scale animation on hover (1.05x)
+- Smooth transitions
+
+**CSS Classes:**
+- `.gallery-grid` - CSS Grid container
+- `.gallery-item` - Grid item with overflow hidden
+- `.gallery-placeholder` - Content container with gradient
+
+**Responsive:**
+- Desktop: 3+ columns
+- Tablet: 2 columns
+- Mobile: 1 column
+
+---
+
+### 7. About Us Section (`<section id="about" class="about">`)
+
+**Purpose:** Share church mission, vision, and story
+
+**HTML Structure:**
+```html
+<section id="about" class="about">
+    <div class="container">
+        <h2 class="section-title">About Our Church</h2>
+        <p class="section-subtitle">Building a Community of Faith</p>
+        
+        <div class="about-content">
+            <div class="about-column">
+                <h3>Our Mission</h3>
+                <p>To be a welcoming community where people of all backgrounds...</p>
+            </div>
+            <div class="about-column">
+                <h3>Our Vision</h3>
+                <p>To create a vibrant fellowship where English and Romanian speakers...</p>
+            </div>
+            <div class="about-column">
+                <h3>Our Beliefs</h3>
+                <p>We believe in the power of God's Word, the importance of worship...</p>
+            </div>
+        </div>
+        
+        <div class="about-history">
+            <h3>Our Story</h3>
+            <p>Fellowship International Romanian Church was founded to serve the...</p>
+        </div>
+    </div>
+</section>
+```
+
+**Three-Column Content:**
+1. **Our Mission** - Community welcome and faith growth
+2. **Our Vision** - Bilingual fellowship and cultural bridge
+3. **Our Beliefs** - Theological foundation and values
+
+**Story Section:**
+- Full-width after three columns
+- Blue gradient background
+- White text
+- Centered alignment
+
+**HTML Elements:**
+- `<section>` - About container
+- `<h2>`, `<h3>` - Headings (h3 used for columns)
+- `<p>` - Content paragraphs
+- `<div>` - Layout containers
+
+**CSS Classes:**
+- `.about` - Section container
+- `.about-content` - Three-column grid (`repeat(auto-fit, minmax(280px, 1fr))`)
+- `.about-column` - Individual column with red left-border
+- `.about-history` - Story section with blue gradient, white text
+
+**Responsive:**
+- Desktop: 3 columns for top section
+- Mobile: 1 column
+
+---
+
+### 8. Contact Section (`<section id="contact" class="contact">`)
+
+**Purpose:** Provide church contact information, map, and social links
+
+**HTML Structure:**
+```html
+<section id="contact" class="contact">
+    <div class="container">
+        <h2 class="section-title">Get In Touch</h2>
+        
+        <div class="contact-content">
+            <div class="contact-info">
+                <h3>Fellowship International Romanian Church</h3>
+                
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h4>Address</h4>
+                        <p>140 Rotonda Blvd W<br>Rotonda West, FL 33947</p>
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-user-clergy"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h4>Pastor</h4>
+                        <p>Cornel Stef</p>
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h4>Phone</h4>
+                        <a href="tel:312-972-4262">312-972-4262</a>
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h4>Email</h4>
+                        <a href="mailto:pastorcornel@fellowshipenglewood.com">
+                            pastorcornel@fellowshipenglewood.com
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fab fa-facebook"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h4>Facebook</h4>
+                        <a href="https://www.facebook.com/profile.php?id=61577056664026" 
+                           target="_blank">
+                            Follow Us On Facebook
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="social-links">
+                    <a href="https://www.facebook.com/profile.php?id=61577056664026" 
+                       target="_blank" class="social-icon facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=..." 
+                        width="100%" height="400" style="border:0;" 
+                        allowfullscreen="" loading="lazy">
+                </iframe>
+            </div>
+        </div>
+    </div>
+</section>
+```
+
+**Contact Items (5 total):**
+
+| Icon | Type | Content |
+|------|------|---------|
+| `fas fa-map-marker-alt` | Address | 140 Rotonda Blvd W, Rotonda West, FL 33947 |
+| `fas fa-user-clergy` | Pastor | Cornel Stef |
+| `fas fa-phone` | Phone | `tel:312-972-4262` (clickable) |
+| `fas fa-envelope` | Email | `mailto:pastorcornel@fellowshipenglewood.com` (clickable) |
+| `fab fa-facebook` | Facebook | Link to Facebook page |
+
+**Key Features:**
+- Two-column layout (info + map)
+- Clickable phone number (`tel:` protocol)
+- Clickable email (`mailto:` protocol)
+- Google Maps embed
+- Social media icons
+- Blue gradient background
+
+**HTML Elements:**
+- `<div>` - Contact item containers
+- `<h3>`, `<h4>` - Headings
+- `<p>` - Static text
+- `<a>` - Clickable links with protocols
+- `<i>` - Font Awesome icons
+- `<iframe>` - Google Maps embed
+
+**CSS Classes:**
+- `.contact` - Section with blue gradient
+- `.contact-content` - Two-column grid
+- `.contact-info` - Information column
+- `.contact-item` - Individual item with flex layout
+- `.contact-icon` - Icon styling (red color)
+- `.contact-details` - Text content
+- `.map-container` - Maps iframe wrapper
+- `.social-links` - Social icons container
+- `.social-icon` - Individual social button
+
+**Google Maps:**
+- Embedded iframe with address
+- Responsive width (100%)
+- Height: 400px (adjusts for mobile)
+- `loading="lazy"` for performance
+
+---
+
+### 9. Footer (`<footer class="footer">`)
+
+**Purpose:** Site-wide footer with links, hours, and copyright
+
+**HTML Structure:**
+```html
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <img src="assets/fellowship church internaltional.jpg"
+                     alt="Fellowship International Romanian Church" 
+                     class="footer-logo">
+                <h4>Fellowship International Romanian Church</h4>
+                <p>Bringing faith, hope, and community together</p>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#invitation">Invitation</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Service Hours</h4>
+                <p>Sundays<br>10:30 AM - 2:00 PM</p>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2026 Fellowship International Romanian Church. All rights reserved.</p>
+            <p>140 Rotonda Blvd W, Rotonda West, FL 33947</p>
+        </div>
+    </div>
+</footer>
+```
+
+**Footer Sections (3 columns):**
+
+1. **Logo Section**
+   - Church logo image
+   - Name heading
+   - Mission statement
+
+2. **Quick Links**
+   - Home
+   - Invitation
+   - About Us
+   - Gallery
+   - Contact
+
+3. **Service Hours**
+   - Sundays
+   - 10:30 AM - 2:00 PM
+
+**Bottom Section:**
+- Copyright notice (© 2026)
+- Address information
+
+**HTML Elements:**
+- `<footer>` - Semantic footer element
+- `<div>` - Layout containers
+- `<h4>` - Section headings
+- `<p>` - Text content
+- `<ul>`, `<li>` - List items
+- `<a>` - Anchor links
+- `<br>` - Line breaks
+- `<img>` - Logo image
+
+**CSS Classes:**
+- `.footer` - Dark background container
+- `.footer-content` - Three-column grid
+- `.footer-section` - Individual column
+- `.footer-logo` - Logo styling
+- `.footer-bottom` - Bottom border section
+
+**Styling:**
+- Dark background (`var(--dark-text)`)
+- Red accent headings
+- White text with opacity for secondary
+- Grid layout: 3 columns → 1 column on mobile
+
+---
+
+## 🎨 CSS Characteristics
+
+### Color System
+```css
+:root {
+    --primary-red: #DC143C;           /* Accent & highlights */
+    --primary-blue: #003366;          /* Main headings */
+    --light-blue: #1E5A96;            /* Secondary elements */
+    --white: #F3F5F9;                 /* Primary background */
+    --dark-text: #2C3E50;             /* Body text */
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+```
+
+### Typography
+```css
+body {
+    font-family: 'Poppins', sans-serif;        /* Body text */
+    line-height: 1.6;                         /* Readability */
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Cardo', serif;               /* Headings */
+    font-weight: 700;
+}
+```
+
+### Layouts
+- **CSS Grid** - Section layouts, gallery, footer
+- **Flexbox** - Navigation, cards, items
+- **Responsive** - Media queries at 768px and 480px
+
+### Animations
+- **Fade-in** - Hero section content
+- **Scale** - Gallery items on hover
+- **Translate** - Cards on hover
+- **Background move** - Hero pattern animation
+
+---
+
+## 🔧 Technologies & Libraries
+
+### Built With
+- **HTML5** - Semantic markup
+- **CSS3** - Modern styling with Grid/Flexbox
+- **JavaScript (Vanilla)** - No frameworks needed
+- **Font Awesome 6.5.1** - Icons via CDN
+- **Google Fonts** - Cardo & Poppins
+- **Google Maps API** - Embedded location
+
+### JavaScript Functionality
+- Mobile menu toggle
+- Scroll animations
+- Smooth scrolling
+- Intersection Observer for performance
+
+---
+
+## 📱 Responsive Design
+
+| Screen | Width | Layout |
+|--------|-------|--------|
+| Desktop | 1200px+ | Full layouts |
+| Tablet | 769-1199px | Adjusted spacing |
+| Mobile | 481-768px | Hamburger menu |
+| Small | <480px | Minimal spacing |
+
+---
+
+## 🚀 How to Use
+
+### Run Locally
+```bash
+# Python
+python3 -m http.server 8000
+
+# PHP
+php -S localhost:8000
+```
+
+Then open: `http://localhost:8000`
+
+### Customize Content
+Edit `index.html` to change:
+- Pastor name
+- Phone number
+- Email address
+- Service times
+- Facebook link
+
+### Change Colors
+Edit CSS variables in `styles.css` (lines ~10):
+```css
+--primary-red: #DC143C;
+--primary-blue: #003366;
+```
+
+---
+
+## ✅ Quality Checklist
+
+- ✅ Bilingual content (English & Romanian)
+- ✅ Accessible HTML structure
+- ✅ Responsive all devices
+- ✅ Modern design
+- ✅ Facebook integration
+- ✅ Contact information
+- ✅ Service schedule
+- ✅ Gallery section
+- ✅ Invitation flyer
+- ✅ Mobile menu
+- ✅ SEO-friendly
+
+---
+
+**Website Version:** 1.0  
+**Last Updated:** February 23, 2026  
+**Created for:** Fellowship International Romanian Church

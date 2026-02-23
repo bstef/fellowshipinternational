@@ -348,6 +348,96 @@ section {
 }
 
 /* ============================================
+   INVITATION SECTION
+   ============================================ */
+
+.invitation {
+    background: linear-gradient(135deg, #F3F5F9 0%, #EFF1F6 100%);
+    padding: 80px 0;
+}
+
+.flyer-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+    background: linear-gradient(135deg, #FFFFFF 0%, #F9FAFB 100%);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    border-left: 6px solid var(--primary-red);
+}
+
+.flyer-image {
+    position: relative;
+}
+
+.flyer-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+}
+
+.flyer-image img:hover {
+    transform: scale(1.02);
+}
+
+.flyer-info h3 {
+    font-family: 'Cardo', serif;
+    font-size: 2rem;
+    color: var(--primary-blue);
+    margin-bottom: 20px;
+}
+
+.flyer-info p {
+    color: var(--dark-text);
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.service-times {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.time-slot {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 15px;
+    background: linear-gradient(135deg, #F3F5F9 0%, #EFF1F6 100%);
+    border-radius: 8px;
+    border-left: 4px solid var(--primary-red);
+    transition: all 0.3s ease;
+}
+
+.time-slot:hover {
+    background: linear-gradient(135deg, #EBF0FA 0%, #E3EBF8 100%);
+    transform: translateX(5px);
+}
+
+.time-icon {
+    font-size: 2rem;
+    flex-shrink: 0;
+}
+
+.time-slot h4 {
+    color: var(--primary-blue);
+    font-size: 1.2rem;
+    margin-bottom: 3px;
+    font-weight: 600;
+}
+
+.time-slot p {
+    color: #666;
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+/* ============================================
    ABOUT US SECTION
    ============================================ */
 
@@ -410,7 +500,7 @@ section {
    ============================================ */
 
 .gallery {
-    background: linear-gradient(135deg, #F3F5F9 0%, #EFF1F6 100%);
+    background: linear-gradient(135deg, #E8EEF5 0%, #DDE3ED 100%);
     padding: 80px 0;
 }
 
@@ -423,29 +513,34 @@ section {
 .gallery-item {
     position: relative;
     overflow: hidden;
-    border-radius: 8px;
+    border-radius: 12px;
     box-shadow: var(--shadow);
     transition: all 0.3s ease;
     aspect-ratio: 1;
 }
 
 .gallery-item:hover {
-    transform: scale(1.05);
+    transform: scale(1.05) rotateY(2deg);
     box-shadow: var(--shadow-lg);
 }
 
 .gallery-placeholder {
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, #DDE3ED 0%, #CDD5E8 50%, #DDE3ED 100%);
+    background: linear-gradient(135deg, var(--primary-blue) 0%, var(--light-blue) 50%, #0D4A8A 100%);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    color: var(--light-blue);
-    font-size: 3rem;
+    color: var(--white);
+    font-size: 3.5rem;
     text-align: center;
     padding: 20px;
+    transition: all 0.3s ease;
+}
+
+.gallery-item:hover .gallery-placeholder {
+    background: linear-gradient(135deg, var(--light-blue) 0%, #0D4A8A 50%, var(--primary-red) 100%);
 }
 
 .gallery-placeholder i {
@@ -453,101 +548,108 @@ section {
 }
 
 .gallery-placeholder p {
-    font-size: 1rem;
+    font-size: 1.1rem;
     font-weight: 600;
-    color: var(--primary-blue);
+    color: var(--white);
 }
 
 /* ============================================
-   EVENTS SECTION
+   EVENTS & FACEBOOK SECTION
    ============================================ */
 
 .events {
-    background: linear-gradient(135deg, #E8EEF5 0%, #DDE3ED 100%);
+    background: linear-gradient(135deg, var(--primary-blue) 0%, var(--light-blue) 50%, #1E5A96 100%);
+    padding: 80px 0;
+    position: relative;
+    overflow: hidden;
 }
 
-.facebook-events {
+.events::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    background-size: 50px 50px;
+    pointer-events: none;
+}
+
+.events .section-title {
+    color: var(--white);
+}
+
+.events .section-subtitle {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.facebook-container {
+    position: relative;
+    z-index: 1;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.facebook-box {
+    background: linear-gradient(135deg, #FFFFFF 0%, #F9FAFB 100%);
+    padding: 60px 40px;
+    border-radius: 15px;
     text-align: center;
-    margin-bottom: 50px;
-    padding: 30px;
-    background: linear-gradient(135deg, #F3F5F9 0%, #EFF1F6 100%);
-    border-radius: 10px;
-    border-left: 5px solid var(--primary-red);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    border-top: 5px solid #1877F2;
+    transition: all 0.3s ease;
+}
+
+.facebook-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+}
+
+.facebook-icon-large {
+    font-size: 4rem;
+    color: #1877F2;
+    margin-bottom: 20px;
+}
+
+.facebook-box h3 {
+    font-family: 'Cardo', serif;
+    font-size: 2rem;
+    color: var(--primary-blue);
+    margin-bottom: 15px;
+}
+
+.facebook-box p {
+    color: var(--dark-text);
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-bottom: 30px;
 }
 
 .facebook-link {
     display: inline-flex;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
     background: #1877F2;
     color: var(--white);
-    padding: 15px 30px;
+    padding: 16px 35px;
     border-radius: 50px;
     text-decoration: none;
     font-weight: 600;
     font-size: 1.1rem;
     transition: all 0.3s ease;
-    margin-bottom: 15px;
+    border: 2px solid #1877F2;
 }
 
 .facebook-link:hover {
     background: #0A66C2;
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(24, 119, 242, 0.3);
+    border-color: #0A66C2;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(24, 119, 242, 0.3);
 }
 
 .facebook-link i {
     font-size: 1.3rem;
-}
-
-.events-note {
-    color: #666;
-    font-size: 0.95rem;
-    margin-top: 10px;
-}
-
-.events-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-}
-
-.event-card {
-    background: linear-gradient(135deg, #F3F5F9 0%, #EFF1F6 100%);
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: var(--shadow);
-    transition: all 0.3s ease;
-    border-bottom: 4px solid var(--primary-blue);
-}
-
-.event-card:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-lg);
-}
-
-.event-date {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    color: var(--primary-red);
-    margin-bottom: 15px;
-    font-weight: 600;
-}
-
-.event-date i {
-    font-size: 1.3rem;
-}
-
-.event-card h3 {
-    color: var(--primary-blue);
-    margin-bottom: 10px;
-    font-size: 1.3rem;
-}
-
-.event-card p {
-    color: #666;
-    line-height: 1.6;
 }
 
 /* ============================================
@@ -800,6 +902,12 @@ section {
         grid-template-columns: 1fr;
     }
 
+    .flyer-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 30px 20px;
+    }
+
     .about-content {
         grid-template-columns: 1fr;
     }
@@ -847,6 +955,10 @@ section {
         font-size: 1.5rem;
     }
 
+    .section-subtitle {
+        font-size: 0.95rem;
+    }
+
     .gallery-grid {
         grid-template-columns: 1fr;
     }
@@ -858,5 +970,30 @@ section {
 
     .contact-item {
         gap: 15px;
+    }
+
+    .flyer-info h3 {
+        font-size: 1.5rem;
+    }
+
+    .facebook-box {
+        padding: 40px 25px;
+    }
+
+    .facebook-box h3 {
+        font-size: 1.5rem;
+    }
+
+    .time-slot {
+        padding: 12px;
+        gap: 15px;
+    }
+
+    .time-icon {
+        font-size: 1.5rem;
+    }
+
+    .time-slot h4 {
+        font-size: 1rem;
     }
 }
